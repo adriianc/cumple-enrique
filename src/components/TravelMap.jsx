@@ -407,11 +407,11 @@ const advance = useCallback(() => {
           zoomControl={false} attributionControl={false}
         >
 <TileLayer
-  url="https://api.mapbox.com/styles/v1/mapbox/streets-v12/tiles/256/{z}/{x}/{y}@2x?access_token=TU_TOKEN_REAL_DE_MAPBOX_AQUÍ"
+  url={`https://api.mapbox.com/styles/v1/mapbox/streets-v12/tiles/256/{z}/{x}/{y}@2x?access_token=${import.meta.env.VITE_MAPBOX_TOKEN}`}
   tileSize={256} 
   zoomOffset={0}
   attribution='© <a href="https://www.mapbox.com">Mapbox</a>'
-/>          
+/>
 
 <MapController target={mapTarget} />
 
