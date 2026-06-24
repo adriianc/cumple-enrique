@@ -406,13 +406,14 @@ const advance = useCallback(() => {
           className="w-full h-full"
           zoomControl={false} attributionControl={false}
         >
-      <TileLayer
-        url={`https://api.mapbox.com/styles/v1/mapbox/streets-v12/tiles/256/{z}/{x}/{y}@2x?access_token=${import.meta.env.VITE_MAPBOX_TOKEN}`}
-        tileSize={256} 
-        zoomOffset={0}
-        attribution='© <a href="https://www.mapbox.com">Mapbox</a>'
-      />
-          <MapController target={mapTarget} />
+<TileLayer
+  url="https://api.mapbox.com/styles/v1/mapbox/streets-v12/tiles/256/{z}/{x}/{y}@2x?access_token=TU_TOKEN_REAL_DE_MAPBOX_AQUÍ"
+  tileSize={256} 
+  zoomOffset={0}
+  attribution='© <a href="https://www.mapbox.com">Mapbox</a>'
+/>          
+
+<MapController target={mapTarget} />
 
           {visibleTrips.map((trip, i) => (
             <PhotoOverlay key={trip.id || i} trip={trip} active={i === activeIndex} />
